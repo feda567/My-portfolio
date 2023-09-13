@@ -24,20 +24,33 @@ const Contact = () => {
         }, 3000)
         }, [])
 
+
+
+
         const sendEmail = (e) => {
           e.preventDefault();
       
-          emailjs.sendForm('service_5ppwj4s', 'template_1oj0z9b', Form.current, 'iS6TZ2B2KSqmqAItc')
-            .then(
-              () => {
-                alert('Message successfully sent!')
-                window.location.reload(false)
-              },
-              () => {
-                alert('Failed to send the message, please try again')
-              }
-            )
-            }
+          emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', Form.current, 'YOUR_PUBLIC_KEY')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        };
+        // const sendEmail = (e) => {
+        //   e.preventDefault();
+      
+        //   emailjs.sendForm('service_5ppwj4s', 'template_1oj0z9b', Form.current, 'iS6TZ2B2KSqmqAItc')
+        //     .then(
+        //       () => {
+        //         alert('Message successfully sent!')
+        //         window.location.reload(false)
+        //       },
+        //       () => {
+        //         alert('Failed to send the message, please try again')
+        //       }
+        //     )
+        //     }
     
     return (
         <>

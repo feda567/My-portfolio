@@ -3,7 +3,7 @@
 
 
 
-
+import React from 'react'
 import Loader from 'react-loaders'
 import { useEffect, useRef, useState } from 'react'
 // import emailjs from '@emailjs/browser'
@@ -14,6 +14,46 @@ import './index.scss'
 
 
 const Contact = () => {
+  const [name, setName] = React.useState("")
+  const [subject, setSubject] = React.useState("")
+  const [email, setEmail] = React.useState("")
+  const [message, setMessage] = React.useState("")
+  console.log(name,email, message,subject)
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    // Prepare the data to be sent in the request body
+    const data = {
+      name,
+      subject,
+      email,
+      message,
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      // Check if the request was successful (status code 2xx)
+      if (response.ok) {
+        console.log('Data sent successfully');
+        // You can handle success here, such as displaying a success message to the user
+      } else {
+        // If the server returns an error, you can handle it here
+        console.error('Error sending data:', response.statusText);
+      }
+    } catch (error) {
+      // Handle any network or other errors that might occur during the fetch
+      console.error('Fetch error:', error);
+    }
+  };
+
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const Form = useRef ()
@@ -24,33 +64,26 @@ const Contact = () => {
         }, 3000)
         }, [])
 
-
-
-
         const sendEmail = (e) => {
           e.preventDefault();
       
-          emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', Form.current, 'YOUR_PUBLIC_KEY')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        };
-        // const sendEmail = (e) => {
-        //   e.preventDefault();
+          emailjs.sendForm('service_5ppwj4s', 'template_1oj0z9b', Form.current, 'iS6TZ2B2KSqmqAItc')
+            .then(
+              () => {
+                alert('Message successfully sent!')
+                window.location.reload(false)
+              },
+              () => {
+                alert('Failed to send the message, please try again')
+              }
+            )
+            }
+
+    React.useEffect(()=>{
+
       
-        //   emailjs.sendForm('service_5ppwj4s', 'template_1oj0z9b', Form.current, 'iS6TZ2B2KSqmqAItc')
-        //     .then(
-        //       () => {
-        //         alert('Message successfully sent!')
-        //         window.location.reload(false)
-        //       },
-        //       () => {
-        //         alert('Failed to send the message, please try again')
-        //       }
-        //     )
-        //     }
+
+    },[])
     
     return (
         <>
@@ -72,24 +105,28 @@ const Contact = () => {
 <form ref={Form} onSubmit={sendEmail}>
 <dt>
 <li className="half">
-<input placeholder="Name"  type="text" name="name" required />
+<input placeholder="Name"  value={name} onChange={(e)=>setName(e.target.value)} type="text" name="name" required />
 </li>
 <li className="half">
+
 <input
 placeholder="Email"
 type="email"
 name="email"
+value={email} onChange={(e)=>setEmail
+  (e.target.value)}
 required
 />
 </li>
 <li>
-<input placeholder="Subject" type="text" name="subject" required />
+<input placeholder="Subject" value={subject} onChange={(e)=>setSubject(e.target.value)} type="text" name="subject" required />
 </li>
 <li>
-<textarea  placeholder="message" name="message" required></textarea>
+<textarea  placeholder="message" value={message} onChange={(e)=>setMessage
+  (e.target.value)} name="message" required></textarea>
 </li>
 <li>
-<input type="submit" className='flat-button' value="SEND" />
+<input type="submit" onClick={handleFormSubmit} className='flat-button' value="SEND" />
 </li>
 </dt>
 </form>

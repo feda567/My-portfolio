@@ -24,34 +24,40 @@ const Contact = () => {
     e.preventDefault();
 
     // Prepare the data to be sent in the request body
-    const data = {
-      name,
-      subject,
-      email,
-      message,
-    };
-
-    try {
-      const response = await fetch('http://localhost:3000/api/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      // Check if the request was successful (status code 2xx)
-      if (response.ok) {
-        console.log('Data sent successfully');
-        // You can handle success here, such as displaying a success message to the user
-      } else {
-        // If the server returns an error, you can handle it here
-        console.error('Error sending data:', response.statusText);
+    if (name && subject && email && message) {
+      const data = {
+        name: name,
+        subject: subject,
+        email: email,
+        message: message,
+      };
+    
+      try {
+        const response = await fetch('http://localhost:3000/api/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+    
+        // Check if the request was successful (status code 2xx)
+        if (response.ok) {
+          console.log('Data sent successfully');
+          alert('Data sent successfully');
+        } else {
+          // If the server returns an error, you can handle it here
+          console.error('Error sending data:', response.statusText);
+        }
+      } catch (error) {
+        // Handle any network or other errors that might occur during the fetch
+        console.error('Fetch error:', error);
       }
-    } catch (error) {
-      // Handle any network or other errors that might occur during the fetch
-      console.error('Fetch error:', error);
+    } else {
+      console.log('It is working');
     }
+    
+    
   };
 
 

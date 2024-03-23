@@ -92,6 +92,11 @@ img {
            content: 'PROJECT';
         }
        }
+       a.skill-link{
+        &:after {
+           content: 'Skill';
+        }
+       }
        a.active {
         svg {
           color: #3dec97;

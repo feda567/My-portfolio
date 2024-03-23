@@ -3,7 +3,7 @@ import './index.scss'
 import LogoS from '../../assets/images/logo-h .jpeg'
 import LogoSubtitle from '../../assets/images/eee.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faClose, faEnvelope, faHome,  faSuitcase,  faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBrain, faClose, faEnvelope, faHome,  faSuitcase,  faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 
@@ -36,6 +36,12 @@ exact="true" activeclassname="active" className="contact-link" to="/contact">
 onClick={() => setShowNav(false)}
 exact="true" activeclassname="active" className="project-link" to="/project">
 <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+
+</NavLink>
+<NavLink 
+onClick={() => setShowNav(false)}
+exact="true" activeclassname="active" className="skill-link" to="/skill">
+<FontAwesomeIcon icon={faBrain} color="#4d4d4e" />
 
 </NavLink>
 <FontAwesomeIcon 

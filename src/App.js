@@ -6,12 +6,14 @@ import About from './components/About';
 import Contact from './components/Contact';
 import './App.scss';
 import Project from './components/Project';
+import Skill from './components/Skill';
 
 
 
 function App() {
   return (
    <>
+   
    <Sidebar/>
    <Routes>
     
@@ -20,6 +22,8 @@ function App() {
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
        <Route path="project" element={<Project/>} />
+       <Route path="skill" element={<Skill/>} />
+       
       </Route>
       </Routes>
       </>

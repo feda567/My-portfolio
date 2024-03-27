@@ -65,7 +65,7 @@ const Skill = () => {
               <TagCloud
                 className='tg-container'
                 options={(w) => ({
-                  radius: Math.min(700, w.innerWidth, w.innerHeight) / 2,
+                  radius: Math.min(500, w.innerWidth, w.innerHeight) / 2,
                   maxSpeed: "fastest",
                 })}
                 onClick={(tag, ev) => alert(tag)}

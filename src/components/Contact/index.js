@@ -33,7 +33,7 @@ const Contact = () => {
       };
     
       try {
-        const response = await fetch('http://localhost:3000/api/messages', {
+        const response = await fetch('https://long-rose-chipmunk-yoke.cyclic.app/api/messages', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

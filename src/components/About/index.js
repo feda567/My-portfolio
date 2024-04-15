@@ -29,7 +29,7 @@ const About = () => {
         </h1>
         <p>
         I'm very ambitious fullstack developer  looking for a role in
-        established IT company with the opportunity  <b >because i'm still berozgar (unemployed) is any recruitor read this kindly contact  me</b>  to work with the latest
+        established IT company with the opportunity  <b > is any recruitor read this kindly contact  me</b>  to work with the latest
         technologies on challenging and diverse projects.
         </p> 
         <p>I'm quietly confident, naturally curious, and perpetually working on

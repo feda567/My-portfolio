@@ -104,7 +104,7 @@ const Contact = () => {
     </h1>
     <p>
     I'm very ambitious fullstack developer  looking for a role in
-        established IT company with the opportunity  because i'm still berozbar unemployed is any recruitor read this kindly contact with me to work with the latest
+        established IT company with the opportunity  is any recruitor read this kindly contact with me to work with the latest
         technologies on challenging and diverse projects.
     </p>
     <div className="contact-form">

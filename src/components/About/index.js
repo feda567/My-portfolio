@@ -28,17 +28,14 @@ const About = () => {
         />
         </h1>
         <p>
-        I'm very ambitious fullstack developer  looking for a role in
-        established IT company with the opportunity  <b > is any recruitor read this kindly contact  me</b>  to work with the latest
-        technologies on challenging and diverse projects.
-        </p> 
-        <p>I'm quietly confident, naturally curious, and perpetually working on
-          improving my chops one design problem at a time.
-</p>
-<p>
+        I'm a skilled software developer proficient in React and Java, 
+        dedicated to crafting innovative solutions. Currently interning at IBM, 
+        I'm gaining hands-on experience and honing my expertise on cutting-edge projects.
+         My journey includes practical exposure to Kubernetes, enhancing my ability to deploy and manage containerized applications efficiently.
+   </p>
+   <p>
 If I need to define myself in one sentence that would be a family
-person, Son of a beautiful parents, a sports fanatic, photography
-enthusiast, and tech-obsessed!!!
+person who values honesty and punctuality, passionate about sports and technology!!!
 </p>
        
         </div>

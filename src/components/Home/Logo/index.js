@@ -22,11 +22,12 @@ const Logo = () => {
 
   return (
     <div className="logo-container" ref={bgRef}>
+      
       <img
         className="solid-logo"
         ref={solidLogoRef}
         src={LogoS}
-        alt="JavaScript,  Developer"
+        alt=" "
       />
 
       {/* Your SVG code without GSAP animations */}

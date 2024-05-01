@@ -4,7 +4,7 @@ import LogoS from '../../assets/images/logo-h .jpeg'
 import LogoSubtitle from '../../assets/images/eee.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBrain, faClose, faEnvelope, faHome,  faSuitcase,  faUser } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 
 const Sidebar = () => {
@@ -50,17 +50,14 @@ exact="true" activeclassname="active" className="skill-link" to="/skill">
           color="#ffd700"
           size="3x"
           className='close-icon' />
-{/* <NavLink exact="true" activeclassname="active" className="portfolio-link" to="/portfolio">
-<FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
 
-</NavLink> */}
 </nav>
 <ul>
  <li>
    <a
     target="_blank"
     rel="noreferrer"
-    href="https://www.linkedin.com/in/hasan-iqbal-b28322216"
+    href="https://www.linkedin.com/in/feda-salim-a9a382218/"
     >
      <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
 </a>
@@ -69,30 +66,12 @@ exact="true" activeclassname="active" className="skill-link" to="/skill">
    <a
     target="_blank"
     rel="noreferrer"
-    href="https://github.com/Rooney9999"
+    href="https://github.com/feda567"
     >
      <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
 </a>
 </li>
-<li>
-   <a
-    target="_blank"
-    rel="noreferrer"
-    href="https://instagram.com/coding_ding?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
-    >
-     <FontAwesomeIcon 
-     icon={faInstagram} color="#4d4d4e" />
-</a>
-</li>
-<li>
-   <a
-    target="_blank"
-    rel="noreferrer"
-    href="https://youtube.com/@Coding_ding?si=lGaUu-ks7g40jhiz"
-    >
-     <FontAwesomeIcon icon={faYoutube} color="#4d4d4e" />
-</a>
-</li>
+
 </ul>
 <FontAwesomeIcon 
           onClick={() => setShowNav(true)}

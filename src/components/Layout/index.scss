@@ -8,7 +8,7 @@ bottom: auto;
 top: 35px;
 }
 .tags {
-color: #3dec97;
+color: #848493;
 opacity: 0.6;
 position: absolute;
 bottom: 0;
@@ -53,7 +53,7 @@ font-family: 'La Belle Aurore';
         h1 {
         font-size: 53px;
         font-family: 'Coolvetica';
-        color:#3dec97;
+        color:#848493        ;
         font-weight: 400;
         margin-top: 0;
         position: relative;
@@ -64,7 +64,7 @@ font-family: 'La Belle Aurore';
         &:before {
             content: '<h1>';
             font-family: 'La Belle Aurore', cursive;
-            color: #3dec97;
+            color: #848493;            ;
             font-size: 18px;
             position: absolute;
             margin-top: -10px;
@@ -75,7 +75,7 @@ font-family: 'La Belle Aurore';
           &:after {
             content: '<h1/>';
             font-family: 'La Belle Aurore', cursive;
-            color: #3dec97;
+            color: #848493;            ;
             font-size: 18px;
             line-height: 18px;
             position: absolute;
@@ -135,23 +135,3 @@ font-family: 'La Belle Aurore';
     }
 
   }}
-
-//       h1.page-title {
-//         margin-left: 20px;
-//         margin-top: 20px;
-//       }
-
-//       .image-box {
-//         height: 200px;
-//         max-width: calc(50% - 10px);
-//       }
-//     }
-  
-
-//   .stage-cube-cont {
-//     position: initial;
-//     width: 100%;
-//     height: 0%;
-//     overflow: visible;
-//   }
-// }

@@ -49,7 +49,7 @@ const Skill = () => {
               </h1>
               <p>
                 Expert in front-end development including technologies like
-                <b> HTML5, CSS3, JavaScript, React, Bootstrap, Python, Java, Mysql etc.</b>
+                <b> Kubernetes, HTML5, CSS3, JavaScript, React, Bootstrap, Python, Java etc.</b>
                 <p>
                   I'm not a designer but I have a good sense of aesthetics, and
                   experience in responsive, mobile-first web design. I put special effort
@@ -73,14 +73,14 @@ const Skill = () => {
               >
                 {[
                   "VSCode",
-                  "TypeScript",
+                  "Kubernetes",
                   "React",
                   "Python",
                   "Java",
-                  "Mysql",
-                  "Mongodb",
+                  "Figma",
+                  "Java",
                   "Nodejs",
-                  "Expressjs",
+                  "Javascript",
                   "Html",
                   "Css",
                 ]}

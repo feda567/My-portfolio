@@ -7,7 +7,10 @@
     z-index: 3;
     min-height: 500px;
 
-    
+    p{
+      font-size:19px;
+      text-align: center;
+    }
 .logo {
   display: block;
   padding: 8px 0;
@@ -16,7 +19,7 @@
 img {
   display: block;
   margin: 8px auto;
-  width: 30px;
+  width: 61px;
   height: auto;
   &.sub-logo {
           width: 40px;

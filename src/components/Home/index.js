@@ -36,7 +36,7 @@ const Home = () => {
         <br />
         </h1> 
         <br/>
-        <h2>frontend developer / DevOps  / Java </h2>
+        <h2>Frontend developer / DevOps  / Java </h2>
         <Link to="/contact" className='flat-button'> CONTACT ME </Link>
 
         </div>
